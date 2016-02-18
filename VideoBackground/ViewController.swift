@@ -16,8 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let bundle = NSBundle.mainBundle()
-        let path = bundle.pathForResource("backgroundVideo", ofType: "mp4")
+        let path = NSBundle.mainBundle().pathForResource("backgroundVideo", ofType: "mp4")
         player = AVPlayer(URL: NSURL(fileURLWithPath: path!))
         // Set the actionAtItemEnd is important for the notification part
         player!.actionAtItemEnd = AVPlayerActionAtItemEnd.None
@@ -55,12 +54,5 @@ class ViewController: UIViewController {
     func playerItemDidReachEnd() {
         player!.seekToTime(kCMTimeZero)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
