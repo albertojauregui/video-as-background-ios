@@ -12,6 +12,7 @@
 		1558256D1C75885900A96A23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1558256B1C75885900A96A23 /* Main.storyboard */; };
 		1558256F1C75885900A96A23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1558256E1C75885900A96A23 /* Assets.xcassets */; };
 		155825721C75885900A96A23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155825701C75885900A96A23 /* LaunchScreen.storyboard */; };
+		1558257A1C758D0C00A96A23 /* backgroundVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 155825791C7588FF00A96A23 /* backgroundVideo.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1558256E1C75885900A96A23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		155825711C75885900A96A23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		155825731C75885900A96A23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155825791C7588FF00A96A23 /* backgroundVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = backgroundVideo.mp4; path = ../backgroundVideo.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		155825661C75885900A96A23 /* VideoBackground */ = {
 			isa = PBXGroup;
 			children = (
+				155825791C7588FF00A96A23 /* backgroundVideo.mp4 */,
 				155825671C75885900A96A23 /* AppDelegate.swift */,
 				155825691C75885900A96A23 /* ViewController.swift */,
 				1558256B1C75885900A96A23 /* Main.storyboard */,
@@ -122,6 +125,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1558257A1C758D0C00A96A23 /* backgroundVideo.mp4 in Resources */,
 				155825721C75885900A96A23 /* LaunchScreen.storyboard in Resources */,
 				1558256F1C75885900A96A23 /* Assets.xcassets in Resources */,
 				1558256D1C75885900A96A23 /* Main.storyboard in Resources */,

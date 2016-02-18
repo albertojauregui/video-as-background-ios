@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var player: AVPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let bundle = NSBundle.mainBundle()
+        let path = bundle.pathForResource("backgroundVideo", ofType: "mp4")
+        player = AVPlayer(URL: NSURL(fileURLWithPath: path!))
+        let playerLayer = AVPlayerLayer(player: player)
+        
+        playerLayer.frame = self.view.frame
+        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        
+        self.view.layer.addSublayer(playerLayer)
+        
+        player!.seekToTime(kCMTimeZero)
+        player!.play()
     }
 
     override func didReceiveMemoryWarning() {
