@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         let bundle = NSBundle.mainBundle()
         let path = bundle.pathForResource("backgroundVideo", ofType: "mp4")
         player = AVPlayer(URL: NSURL(fileURLWithPath: path!))
+        player!.actionAtItemEnd = AVPlayerActionAtItemEnd.None
         let playerLayer = AVPlayerLayer(player: player)
         
         playerLayer.frame = self.view.frame
@@ -26,8 +27,14 @@ class ViewController: UIViewController {
         
         self.view.layer.addSublayer(playerLayer)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerItemDidReachEnd", name: AVPlayerItemDidPlayToEndTimeNotification, object: player!.currentItem)
+        
         player!.seekToTime(kCMTimeZero)
         player!.play()
+    }
+    
+    func playerItemDidReachEnd() {
+        player!.seekToTime(kCMTimeZero)
     }
 
     override func didReceiveMemoryWarning() {
